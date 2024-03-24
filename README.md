@@ -10,9 +10,12 @@ This repository contains code for a Flask-based web application for speech analy
 - [Installation](#installation)
 - [Usage](#usage)
 - [Deployment](#deployment)
+- [Challenges](#challenges)
 - [License](#license)
 
 ## Overview
+
+LINK TO MY MODEL: https://speechanalysis-5ehzxowrfq-ue.a.run.app/
 
 The application allows users to upload either text files or audio files containing conversations. It then processes the input data using OpenAI's language model and Deepgram's speech recognition API to analyze the conversation content. The analyzed data is then presented back to the user, highlighting key insights about each speaker.
 
@@ -43,6 +46,8 @@ pip install -r requirements.txt
 ```
 
 ## Usage
+
+### (EXPLORER/HERO MODE)
 
 To use the application locally, follow these steps:
 
@@ -101,6 +106,7 @@ To run the application using Docker, follow these steps:
 For local development and testing, you can use the Flask development server.
 
 ### Cloud Deployment
+### (MASTER MODE)
 
 To deploy the application to Google Cloud Run, follow these steps:
 
@@ -121,7 +127,7 @@ To deploy the application to Google Cloud Run, follow these steps:
     gcloud config set run/region [REGION]
     ```
 
-   Replace `[PROJECT_ID]` with your actual Google Cloud project ID and `[REGION]` with your preferred region (e.g., `us-central1`).
+   Replace `[PROJECT_ID]` with your actual Google Cloud project ID (e.g., `speech-analysis-418123`) and `[REGION]` with your preferred region (e.g., `us-central1`).
 
 5. **Artifact Permissions**: Ensure that your account has the necessary permissions for accessing Artifact Registry, Cloud Build, and Cloud Run services. Grant the appropriate roles using the IAM & Admin section of the [Google Cloud Console](https://console.cloud.google.com/iam-admin/iam).
 
@@ -146,6 +152,16 @@ To deploy the application to Google Cloud Run, follow these steps:
    Once the deployment is complete, you will receive a URL where your application is hosted on Google Cloud Run.
 
 Replace `[PROJECT_ID]` and `[REGION]` with your actual project ID and preferred region, respectively.
+
+## Challenges
+
+1. Initially I faced version issues.
+- To resolve this, I used version control
+2. The model started hallucination and generating random insights and speakers.
+- To remedy this, I tuned the temperature, removed buffer memory and tried various prompts.
+3. Handling the transcribed text from audio file was tricky.
+- I had to check the JSON format and it's contents.
+4. I had to generalize the code because Flask typically runs on port 5000 by default, whereas the deployed model operates on port 8080.
 
 ## License
 
