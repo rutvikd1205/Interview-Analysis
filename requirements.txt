@@ -9,3 +9,4 @@ typing
 unstructured
 langchain
 flask
+gunicorn
