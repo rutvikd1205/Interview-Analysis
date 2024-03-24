@@ -10,19 +10,13 @@ This repository contains code for a Flask-based web application for speech analy
 - [Installation](#installation)
 - [Usage](#usage)
 - [Deployment](#deployment)
-<<<<<<< HEAD
 - [Challenges](#challenges)
-=======
->>>>>>> 84ffee6 (Readme file updated)
 - [License](#license)
 
 ## Overview
 
-<<<<<<< HEAD
-LINK TO MY MODEL: https://speechanalysis-5ehzxowrfq-ue.a.run.app/
+LINK TO MY MODEL: [Speech Analysis Model](https://speechanalysis-5ehzxowrfq-ue.a.run.app/)
 
-=======
->>>>>>> 84ffee6 (Readme file updated)
 The application allows users to upload either text files or audio files containing conversations. It then processes the input data using OpenAI's language model and Deepgram's speech recognition API to analyze the conversation content. The analyzed data is then presented back to the user, highlighting key insights about each speaker.
 
 ## Features
@@ -53,11 +47,8 @@ pip install -r requirements.txt
 
 ## Usage
 
-<<<<<<< HEAD
 ### (EXPLORER/HERO MODE)
 
-=======
->>>>>>> 84ffee6 (Readme file updated)
 To use the application locally, follow these steps:
 
 1. **Clone the Repository**: Clone this repository to your local machine using Git:
@@ -115,10 +106,7 @@ To run the application using Docker, follow these steps:
 For local development and testing, you can use the Flask development server.
 
 ### Cloud Deployment
-<<<<<<< HEAD
 ### (MASTER MODE)
-=======
->>>>>>> 84ffee6 (Readme file updated)
 
 To deploy the application to Google Cloud Run, follow these steps:
 
@@ -139,11 +127,7 @@ To deploy the application to Google Cloud Run, follow these steps:
     gcloud config set run/region [REGION]
     ```
 
-<<<<<<< HEAD
    Replace `[PROJECT_ID]` with your actual Google Cloud project ID (e.g., `speech-analysis-418123`) and `[REGION]` with your preferred region (e.g., `us-central1`).
-=======
-   Replace `[PROJECT_ID]` with your actual Google Cloud project ID and `[REGION]` with your preferred region (e.g., `us-central1`).
->>>>>>> 84ffee6 (Readme file updated)
 
 5. **Artifact Permissions**: Ensure that your account has the necessary permissions for accessing Artifact Registry, Cloud Build, and Cloud Run services. Grant the appropriate roles using the IAM & Admin section of the [Google Cloud Console](https://console.cloud.google.com/iam-admin/iam).
 
@@ -169,7 +153,6 @@ To deploy the application to Google Cloud Run, follow these steps:
 
 Replace `[PROJECT_ID]` and `[REGION]` with your actual project ID and preferred region, respectively.
 
-<<<<<<< HEAD
 ## Challenges
 
 1. Initially I faced version issues.
@@ -180,8 +163,6 @@ Replace `[PROJECT_ID]` and `[REGION]` with your actual project ID and preferred 
 - I had to check the JSON format and it's contents.
 4. I had to generalize the code because Flask typically runs on port 5000 by default, whereas the deployed model operates on port 8080.
 
-=======
->>>>>>> 84ffee6 (Readme file updated)
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
