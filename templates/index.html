@@ -12,12 +12,14 @@
         <h1>File Processor</h1>
         <form id="inputForm" enctype="multipart/form-data">
             <div class="form-group">
-                <label for="file_input">Upload File:</label>
+                <h2>Upload File:</h2>
                 <input type="file" id="file_input" name="file_input">
             </div>
             <button type="submit">Process</button>
         </form>
+        <h2>User Input:</h2>
         <div id="conversation"></div>
+        <h2>Model Output:</h2>
         <div id="output"></div>        
     </div>
     <script src="{{ url_for('static', filename='script.js') }}"></script>

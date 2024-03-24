@@ -1,4 +1,13 @@
 /* static/styles.css */
+
+/* Set background color to dark */
+body {
+    background-color: #121212;
+    color: #FFFFFF; /* Set text color to white */
+    font-family: 'Arial', sans-serif; /* Specify a better font */
+    line-height: 1.6; /* Add spacing between lines */
+}
+
 .container {
     max-width: 600px;
     margin: 0 auto;
@@ -9,26 +18,41 @@
     margin-bottom: 20px;
 }
 
-textarea, input[type="file"] {
+textarea,
+input[type="file"],
+button {
     width: 100%;
     padding: 10px;
     font-size: 16px;
+    background-color: #303030; /* Dark background for input fields and button */
+    color: #FFFFFF; /* Text color for input fields and button */
+    border: 1px solid #555; /* Dark border color */
+    border-radius: 5px; /* Rounded corners */
 }
 
 button {
-    padding: 10px 20px;
-    font-size: 16px;
     cursor: pointer;
+    background-color: #4CAF50; /* Green button background color */
+    border: none;
 }
 
-#output {
-    margin-top: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
 }
 
+#output,
 #conversation {
     margin-top: 20px;
     padding: 10px;
     border: 1px solid #ccc;
+    background-color: #303030; /* Dark background for output areas */
+    color: #FFFFFF; /* Text color for output areas */
+    font-family: 'Arial', sans-serif; /* Specify a better font */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Add spacing between lines for output areas */
+#output,
+#conversation {
+    line-height: 1.6;
 }

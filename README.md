@@ -15,7 +15,7 @@ This repository contains code for a Flask-based web application for speech analy
 
 ## Overview
 
-LINK TO MY MODEL: [Speech Analysis Model](https://speechanalysis-5ehzxowrfq-ue.a.run.app/)
+LINK TO MY MODEL: [Speech Analysis Model](https://speechanalysis-6az57ippwq-ue.a.run.app/)
 
 The application allows users to upload either text files or audio files containing conversations. It then processes the input data using OpenAI's language model and Deepgram's speech recognition API to analyze the conversation content. The analyzed data is then presented back to the user, highlighting key insights about each speaker.
 
