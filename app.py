@@ -5,8 +5,8 @@ from langchain_openai import OpenAI
 from langchain.chains import LLMChain
 from langchain.prompts import PromptTemplate
 
-os.environ["OPENAI_API_KEY"] = "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"
-DEEPGRAM_API_KEY = "61c5ee4557b33c33767d8cd6efcb981ec811352f"
+os.environ["OPENAI_API_KEY"] = "Your API Key"
+DEEPGRAM_API_KEY = "Your API Key"
 DEEPGRAM_ENDPOINT = "https://api.deepgram.com/v1/listen"
 
 # Initialize OpenAI API
