@@ -5,8 +5,8 @@ from langchain_openai import OpenAI
 from langchain.chains import LLMChain
 from langchain.prompts import PromptTemplate
 
-os.environ["OPENAI_API_KEY"] = "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"
-DEEPGRAM_API_KEY = "61c5ee4557b33c33767d8cd6efcb981ec811352f"
+os.environ["OPENAI_API_KEY"] = "OpenAI API Key"
+DEEPGRAM_API_KEY = "Deepgram API Key"
 DEEPGRAM_ENDPOINT = "https://api.deepgram.com/v1/listen"
 
 # Initialize OpenAI API
@@ -16,7 +16,8 @@ llm = OpenAI(temperature=0.6)
 input_variables = ["conversation"]
 input_prompt = PromptTemplate(
     input_variables=input_variables,
-    template="I want you to identify key traits or habits of each speaker based on the {conversation}.",
+    # template="I want you to identify key traits or habits of each speaker based on the {conversation} like a psychologist would. Generate 2 types of insights: 1st about personal traits of individual speaker and 2nd about their opinion of each other.",
+    template = "Act like a hiring expert and provide detailed insights about the interview by accessing the {conversation} and provide a score out of 10 for the candidate. Provide their detailed technical expertise and areas where they struggle as well."
 )
 
 

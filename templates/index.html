@@ -4,22 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File Processor</title>
+    <title>Speech Analysis</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <div class="container">
-        <h1>File Processor</h1>
+        <h1>ConvoInsight: An NLP & Speech Recognition Analysis Tool</h1>
         <form id="inputForm" enctype="multipart/form-data">
             <div class="form-group">
-                <h2>Upload File:</h2>
+                <h2>Upload Conversation File (mp3,wav,txt):</h2>
                 <input type="file" id="file_input" name="file_input">
             </div>
             <button type="submit">Process</button>
+            <div id="loading" class="spinner" style="display: none;"></div> <!-- Spinner element -->
         </form>
-        <h2>User Input:</h2>
+        <h2>Conversation:</h2>
         <div id="conversation"></div>
-        <h2>Model Output:</h2>
+        <h2>Interview Summary:</h2>
         <div id="output"></div>        
     </div>
     <script src="{{ url_for('static', filename='script.js') }}"></script>

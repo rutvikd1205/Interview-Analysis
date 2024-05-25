@@ -1,10 +1,18 @@
 // static/script.js
+
 document.getElementById('inputForm').addEventListener('submit', function(event) {
     event.preventDefault();
     var formData = new FormData(this);
     var xhr = new XMLHttpRequest();
     xhr.open('POST', '/process', true);
+    
+    // Show spinner while processing
+    document.getElementById('loading').style.display = 'block';
+
     xhr.onload = function() {
+        // Hide spinner after processing
+        document.getElementById('loading').style.display = 'none';
+
         if (xhr.status === 200) {
             var response = JSON.parse(xhr.responseText);
             document.getElementById('conversation').innerText = response.conversation;
